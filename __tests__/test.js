@@ -2,25 +2,23 @@ require('dotenv').config();
 const fakeRequest = require('supertest');
 const app = require('../lib/app');
 
+const { mungedLocationData } = require ('../lib/utils.js');
+const { data } = require ('../data/locdata.js');
+
 
 describe('app routes', () => {
   describe('', () => {
 
     //Location
     test('returns location data', async() => {
-
-      const expectation = {
-        'formatted_query': expect.any(String),
-        'latitude': expect.any(String),
-        'longitude': expect.any(String)
-      };       
-
-      const data = await fakeRequest(app)
-        .get('/location')
-        .expect('Content-Type', /json/)
-        .expect(200);
-
-      expect(data.body).toEqual(expectation);
+      const expectation = 
+{
+  'formatted_query': 'Portland, Multnomah County, Oregon, USA',
+  'latitude': '45.5202471',
+  'longitude': '-122.6741949'
+};
+      const mungedData = mungedLocationData(data);
+      expect (mungedData).toEqual(expectation);
     });
 
     //Weather

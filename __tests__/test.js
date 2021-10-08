@@ -68,23 +68,128 @@ describe('app routes', () => {
 
       const expectation = [
         {
-          'name': 'Pike Place Chowder',
-          'image_url': 'https://s3-media3.fl.yelpcdn.com/bphoto/ijju-wYoRAxWjHPTCxyQGQ/o.jpg',
-          'price': '$$   ',
-          'rating': '4.5',
-          'url': 'https://www.yelp.com/biz/pike-place-chowder-seattle?adjust_creative=uK0rfzqjBmWNj6-d3ujNVA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=uK0rfzqjBmWNj6-d3ujNVA'
+          'name': 'Mother’s Bistro & Bar',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/mother-s-bistro-and-bar-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
         },
         {
-          'name': 'Umi Sake House',
-          'image_url': 'https://s3-media3.fl.yelpcdn.com/bphoto/c-XwgpadB530bjPUAL7oFw/o.jpg',
-          'price': '$$   ',
-          'rating': '4.0',
-          'url': 'https://www.yelp.com/biz/umi-sake-house-seattle?adjust_creative=uK0rfzqjBmWNj6-d3ujNVA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=uK0rfzqjBmWNj6-d3ujNVA'
-        }       
+          'name': 'Andina Restaurant',
+          'price': '$$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/andina-restaurant-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Deschutes Brewery Portland Public House',
+          'price': '$$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/deschutes-brewery-portland-public-house-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Lechon',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/lechon-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Portland City Grill',
+          'price': '$$$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/portland-city-grill-portland-7?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Cheryl’s on 12th',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/cheryl-s-on-12th-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Luc Lac',
+          'price': '$$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/luc-lac-portland-7?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Salt & Straw',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/salt-and-straw-portland-2?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Grassa',
+          'price': '$$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/grassa-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Screen Door East side',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/screen-door-east-side-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Ground Kontrol Classic Arcade',
+          'price': '$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/ground-kontrol-classic-arcade-portland-2?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Nong\'s Khao Man Gai',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/nongs-khao-man-gai-portland-2?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Ovation Coffee & Tea',
+          'price': '$',
+          'rating': 5,
+          'url': 'https://www.yelp.com/biz/ovation-coffee-and-tea-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Q Restaurant & Bar',
+          'price': '$$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/q-restaurant-and-bar-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Mediterranean Exploration Company',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/mediterranean-exploration-company-portland-2?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Cuon - Vietnamese Street Food',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/cuon-vietnamese-street-food-portland-3?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Stumptown Coffee Roasters',
+          'price': '$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/stumptown-coffee-roasters-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Lardo',
+          'price': '$$',
+          'rating': 4,
+          'url': 'https://www.yelp.com/biz/lardo-portland-4?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Teardrop Cocktail Lounge',
+          'price': '$$',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/teardrop-cocktail-lounge-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        },
+        {
+          'name': 'Lan Su Chinese Garden',
+          'rating': 4.5,
+          'url': 'https://www.yelp.com/biz/lan-su-chinese-garden-portland?adjust_creative=Aq-12RQEloTHZrgHiKvQVg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Aq-12RQEloTHZrgHiKvQVg'
+        }
       ];     
 
       const data = await fakeRequest(app)
-        .get('/reviews')
+        .get('/reviews?latitude=45.523064&longitude=-122.676483')
         .expect('Content-Type', /json/)
         .expect(200);
 

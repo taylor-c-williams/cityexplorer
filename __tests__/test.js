@@ -26,17 +26,37 @@ describe('app routes', () => {
 
       const expectation = [
         {
-          'forecast': expect.any(String),
-          'time': expect.any(String)
+          'forecast': 'Light rain',
+          'time': 'Friday, October 15, 2021'
         },
         {
-          'forecast': expect.any(String),
-          'time': expect.any(String)
+          'forecast': 'Broken clouds',
+          'time': 'Saturday, October 16, 2021'
+        },
+        {
+          'forecast': 'Clear Sky',
+          'time': 'Sunday, October 17, 2021'
+        },
+        {
+          'forecast': 'Overcast clouds',
+          'time': 'Monday, October 18, 2021'
+        },
+        {
+          'forecast': 'Few clouds',
+          'time': 'Tuesday, October 19, 2021'
+        },
+        {
+          'forecast': 'Overcast clouds',
+          'time': 'Wednesday, October 20, 2021'
+        },
+        {
+          'forecast': 'Broken clouds',
+          'time': 'Thursday, October 21, 2021'
         }
       ];       
 
       const data = await fakeRequest(app)
-        .get('/weather')
+        .get('/weather/?latitude=38.123&longitude=-78.543&key=9ffadac5d30740f5ab8fe42efc587085')
         .expect('Content-Type', /json/)
         .expect(200);
 
